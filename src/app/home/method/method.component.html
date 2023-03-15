@@ -1,0 +1,30 @@
+<div class="method" (click)="opentitlebar()">
+  <i
+    class="fa fa-sharp fa-solid"
+    [ngClass]="clicked ? 'fa-angle-down' : 'fa-angle-up'"
+  ></i>
+  <h1 class="method-title">Introduction</h1>
+</div>
+<p class="para-content" *ngIf="clicked">
+  The 4SA Method, How to bring a idea into process?
+</p>
+
+<div class="method" (click)="openthread()">
+  <i
+    class="fa fa-sharp fa-solid"
+    [ngClass]="show ? 'fa-angle-down' : 'fa-angle-up'"
+  ></i>
+  <h1 class="method-title">Thread A</h1>
+</div>
+<p class="para-content" *ngIf="show">
+  How are you going to develop your strategy? Which method are you going to use
+  to develop a strategy?What if the project is lengthy?
+</p>
+<h1 class="method-title example" *ngIf="show">For example</h1>
+<p class="para-content example_para" *ngIf="show">
+  You have a concept; how will you put it into practice to create a product? How
+  will you organize the final product? Can the product's MVP be created in a
+  week?How will you come up with a plan? Do you need a strategy or just a plan
+  to succeed?
+</p>
+

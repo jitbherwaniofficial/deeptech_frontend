@@ -1,0 +1,49 @@
+<div class="sidebar" (click)="expandSidebar()">
+  <div class="sidebar_top" [ngClass]="expand ? 'expand' : ''"></div>
+  <div class="sidebar_bottom" [ngClass]="expand ? 'expand' : ''">
+    <div class="one" *ngIf="!expand">1</div>
+    <div *ngFor="let item of data">
+      <ul *ngIf="expand"><p class="ul_title">{{ item.task_title }}</p>
+        <li>{{item.assets[0].asset_title}}</li>
+        <li>{{item.assets[1].asset_title}}</li>
+        <li>{{item.assets[2].asset_title}}</li>
+        <li>{{item.assets[3].asset_title}}</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="icon-container">
+
+    <div class="side_icon">
+        <i class="fa-solid fa-question"></i>
+    </div>
+    <div class="side_icon">
+        <i class="fa-solid fa-users"></i>
+    </div>
+    <div class="side_icon">
+        <i class="fa-solid fa-calendar"></i>
+    </div>
+</div>
+
+<div class="right_sidebar">
+    <div class="notice_board">
+        <i class="fa-solid fa-xmark"></i>
+        <br>
+        <span>N</span>
+        <span>O</span>
+        <span>T</span>
+        <span>I</span>
+        <span>C</span>
+        <span>E</span>
+        <br>
+        <span>B</span>
+        <span>O</span>
+        <span>A</span>
+        <span>R</span>
+        <span>D</span>
+    </div>
+</div>
+<div class="right_sidebar_connection">
+
+</div>

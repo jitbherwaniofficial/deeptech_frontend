@@ -1,0 +1,114 @@
+<div class="card">
+  <div class="card_header">
+    <span class="text-content">{{ item.asset_title }}</span>
+    <span class="info"><i class="fa-solid fa-info"></i></span>
+  </div>
+  <div class="card_content">
+    <p class="description">
+      <label for="desc">Description: </label> {{ item.asset_description }}
+    </p>
+    <hr />
+    <youtube-player
+      class="show"
+      [height]="450"
+      [width]="576"
+      *ngIf="item.asset_title == 'Technical Project Management' ? show : !show"
+      videoId="{{ item.asset_content.split('/')[4] }}"
+      suggestedQuality="highres"
+    ></youtube-player>
+    <youtube-player
+      class="hide"
+      [width]="448"
+      [height]="380"
+      *ngIf="item.asset_title == 'Technical Project Management' ? show : !show"
+      videoId="{{ item.asset_content.split('/')[4] }}"
+      suggestedQuality="highres"
+    ></youtube-player>
+    <div *ngIf="item.asset_title == 'Threadbuild' ? show : !show">
+      <div class="thread" routerLink="threadbuild" (click)="gotothreadbuild()">
+        <i
+          class="fa fa-sharp fa-solid"
+          [ngClass]="clicked ? 'fa-angle-down' : 'fa-angle-up'"
+        ></i>
+        <h1 class="thread-title">Thread 1</h1>
+      </div>
+      <div>
+        <app-threadbuild *ngIf="clicked"></app-threadbuild>
+      </div>
+    </div>
+    <div *ngIf="item.asset_title == 'Structure you pointers ' ? show : !show">
+      <div class="title">
+        <label class="title_label" for="">Title</label>
+        <input class="title_input" type="text" />
+      </div>
+      <label class="content_label" for="">Content</label>
+      <div class="content">
+        <ul>
+          <li>File</li>
+          <li>Edit</li>
+          <li>View</li>
+          <li>Insert</li>
+          <li>Format</li>
+          <li>Tools</li>
+          <li>Table</li>
+          <li>Help</li>
+        </ul>
+        <div class="svg-container">
+          <svg
+            width="17"
+            height="14"
+            viewBox="0 0 17 14"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M5.79978 1.1501L1.15002 5.13561M1.15002 5.13561L5.79978 9.12111M1.15002 5.13561L11.85 5.13561C14.0592 5.13561 15.85 6.92647 15.85 9.13561L15.85 12.8501"
+              stroke="#616161"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+          <svg
+            width="17"
+            height="15"
+            viewBox="0 0 17 15"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M10.9431 1.32505L15.15 5.53197M15.15 5.53197L10.9431 9.7389M15.15 5.53197H5.85003C3.64089 5.53197 1.85003 7.32284 1.85003 9.53197V13.675"
+              stroke="#616161"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+          <svg
+            width="19"
+            height="19"
+            viewBox="0 0 19 19"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M11.5961 1.8999H17.0995M17.0995 1.8999V7.40335M17.0995 1.8999L11.5961 7.40335M7.40397 17.0999H1.90052M1.90052 17.0999V11.5964M1.90052 17.0999L7.60052 11.3999M17.1 11.596V17.0994M17.1 17.0994H11.5966M17.1 17.0994L11.5966 11.596M1.90002 7.40385L1.90002 1.9004M1.90002 1.9004L7.40348 1.9004M1.90002 1.9004L7.60002 7.6004"
+              stroke="#616161"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+          <div class="rectangle">
+            <span>Paragraph</span>
+          </div>
+          <i class="fa-solid fa-ellipsis"></i>
+        </div>
+        <textarea class="paragraph_textarea" name="" id="" ></textarea>
+      </div>
+    </div>
+    <div *ngIf="item.asset_title == '4SA Method' ? show : !show">
+      <app-method></app-method>
+    </div>
+  </div>
+</div>

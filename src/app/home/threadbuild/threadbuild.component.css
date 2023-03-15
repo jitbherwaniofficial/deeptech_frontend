@@ -1,0 +1,142 @@
+.sub-card {
+  width: 16rem;
+  height: 8rem;
+  border-radius: 10px;
+  box-shadow: 1px 3px 8px rgba(0, 0, 0, 0.25);
+  margin: 1rem;
+}
+
+.sub-card-container {
+  display: flex;
+}
+
+svg{
+    cursor: pointer;
+}
+
+.sub-card-title {
+  background: rgba(0, 0, 0, 0.05);
+  padding: 0.5rem;
+}
+
+textarea {
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  width: 15rem;
+  height: 5rem;
+}
+
+.sub-card-text-input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.selection_container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 1rem;
+  gap: 1rem;
+}
+
+select {
+  width: 8rem;
+  height: 2rem;
+  border-radius: 5px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+  border: none;
+  outline: none;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.825rem;
+  font-weight: 600;
+}
+
+.subthread-btn {
+  width: 8rem;
+  height: 2.5rem;
+  background: #0029ff;
+  border-radius: 10px;
+  color: #ffffff;
+  border: none;
+  margin: 0.5rem 1rem;
+}
+
+.subthread-btn svg {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+}
+
+.summary-card {
+  width: 34rem;
+  height: 8rem;
+  border-radius: 10px;
+  box-shadow: 1px 3px 8px rgba(0, 0, 0, 0.25);
+  margin: 1rem;
+}
+
+.summary-title {
+  background: rgba(0, 0, 0, 0.05);
+  padding: 0.5rem;
+}
+
+.sub-text-input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text{
+    padding-left: 0.5rem;
+    width: 34rem;
+}
+
+
+
+
+@media only screen and (max-width:1400px) and (min-width:1024px){
+  .sub-card{
+    width: 12rem;
+    height: 6rem;
+  }
+
+  .sub-card-title{
+    font-size: 0.9rem;
+  }
+
+  textarea{
+    font-size: 0.8rem;
+    height: 3.5rem;
+    width: 10.8rem;
+  }
+
+  .summary-card {
+    width: 26rem;
+    height: 8rem;
+  }
+
+  .text{
+    width: 25.68rem;
+    height: 5rem;
+  }
+
+  .summary-title{
+    font-size: 0.9rem;
+  }
+
+  .subthread-btn{
+    margin: 1rem;
+  }
+  .selection_container{
+    gap: 0.8rem;
+  }
+
+  select {
+    width: 6rem;
+    font-size: 0.625rem;
+  }
+ }
