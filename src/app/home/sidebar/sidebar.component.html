@@ -1,8 +1,12 @@
-<div class="sidebar" (click)="expandSidebar()">
-  <div class="sidebar_top" [ngClass]="expand ? 'expand' : ''"></div>
+<div class="sidebar">
+  <div class="sidebar_top" [ngClass]="expand ? 'expand' : ''">
+    <div class="arrow" (click)="expandSidebar()">
+      <i class="fa-solid" [ngClass]="expand ? 'fa-arrow-left' : 'fa-arrow-right' "></i>
+    </div>
+  </div>
   <div class="sidebar_bottom" [ngClass]="expand ? 'expand' : ''">
     <div class="one" *ngIf="!expand">1</div>
-    <div *ngFor="let item of data">
+    <div *ngFor="let item of this.data[0].tasks">
       <ul *ngIf="expand"><p class="ul_title">{{ item.task_title }}</p>
         <li>{{item.assets[0].asset_title}}</li>
         <li>{{item.assets[1].asset_title}}</li>
@@ -16,19 +20,19 @@
 <div class="icon-container">
 
     <div class="side_icon">
-        <i class="fa-solid fa-question"></i>
+        <i class="invert fa-solid fa-question"></i>
     </div>
     <div class="side_icon">
-        <i class="fa-solid fa-users"></i>
+        <i class="invert fa-solid fa-users"></i>
     </div>
     <div class="side_icon">
-        <i class="fa-solid fa-calendar"></i>
+        <i class="invert fa-solid fa-calendar"></i>
     </div>
 </div>
 
 <div class="right_sidebar">
     <div class="notice_board">
-        <i class="fa-solid fa-xmark"></i>
+        <i class="invert fa-solid fa-xmark"></i>
         <br>
         <span>N</span>
         <span>O</span>

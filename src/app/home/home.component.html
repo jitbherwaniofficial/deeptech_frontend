@@ -1,4 +1,4 @@
-<section *ngFor="let item of data">
+<section *ngFor="let item of data[0].tasks">
     <h1 class="asset_title">Technical Project Management</h1>
     <div class="rect_card">
         <h3 class="rect_card_title">{{item.task_title}}</h3>
@@ -6,7 +6,7 @@
             {{item.task_description}}
         </p>
     </div>
-    <div class="assets_container" *ngFor="let item of data[0].assets">
+    <div class="assets_container" *ngFor="let item of this.data[0].tasks[0]['assets']">
         <app-card [item]="item"></app-card>
     </div>
     <app-sidebar></app-sidebar>

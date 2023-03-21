@@ -2,7 +2,7 @@
   cursor: pointer;
 }
 .sidebar_top {
-  position: fixed;
+  position:relative;
   background: #000000;
   width: 132px;
   height: 50px;
@@ -10,6 +10,7 @@
   z-index: 1;
   margin-left: -20rem;
   margin-top: -10rem;
+  position: fixed;
 }
 
 .sidebar_bottom {
@@ -40,7 +41,7 @@
 
 .expand {
   width: 500px;
-  transition: 0.8s ease-in;
+  transition: 0.3s ease-in;
 }
 
 ul {
@@ -71,9 +72,10 @@ li {
   right: 5rem;
   bottom: 7rem;
   gap: 1rem;
+  cursor: pointer;
 }
 
-.fa-solid {
+.invert {
   filter: invert(100%);
 }
 
@@ -131,6 +133,20 @@ span {
   border-radius: 0px 0px 0px 0px;
 }
 
+.arrow{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 1.25rem;
+  background-color: #ffffff;
+  position: absolute;
+  right: 0;
+  margin: 0.25rem 1rem;
+  color: #000000;
+}
+
 @media only screen and (max-width: 1400px) and (min-width: 1024px) {
   .sidebar_top {
     width: 100px;
@@ -151,7 +167,7 @@ span {
 
   .expand {
     width: 400px;
-    transition: 0.8s ease-in;
+    transition: 0.3s ease-in;
   }
 
   .icon-container {
